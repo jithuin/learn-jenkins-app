@@ -5,6 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                  bat 'npm --version'
+                 echo 'hello world'
             }
         }
     }
