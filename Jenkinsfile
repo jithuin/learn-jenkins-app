@@ -8,7 +8,7 @@ pipeline {
                      dir /a
                      node --version
                      npm --version
-                     npm ci
+                     npm install 
                      npm run build
                      dir /a 
                  '''
