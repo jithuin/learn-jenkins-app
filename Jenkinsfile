@@ -4,8 +4,14 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                 bat 'npm --version'
-                 echo 'hello world'
+                 bat '''
+                     dir /a
+                     node --version
+                     npm --version
+                     npm ci
+                     npm run build
+                     dir /a 
+                 '''
             }
         }
     }
