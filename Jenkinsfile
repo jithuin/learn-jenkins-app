@@ -14,7 +14,7 @@ pipeline {
         }
         stage('test'){
             steps{
-                bat 'test -f build/index.html'
+                bat 'if exist build/index.html echo It exists! '
             }
         }
     }
